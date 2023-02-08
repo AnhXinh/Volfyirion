@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="951.0" prefWidth="1870.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Affichage.Controller.MainController">
+   <children>
+      <ImageView fitHeight="1064.0" fitWidth="1887.0" layoutX="-8.0" layoutY="-40.0" opacity="0.71" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Volfyirion.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="157.0" fitWidth="106.0" layoutX="559.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/back.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="821.0" layoutY="441.0" onMousePressed="#attackVolfyirion" prefHeight="164.0" prefWidth="218.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="221.0" layoutX="4.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/volfyrions_lair.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutX="837.0" layoutY="282.0" onMousePressed="#attackVolfyirion" prefHeight="147.0" prefWidth="128.0">
+         <children>
+            <ImageView fx:id="initialPlaceVolfy" fitHeight="117.0" fitWidth="106.0" layoutX="11.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Volfy.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="815.0" layoutY="742.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="75.0">
+         <children>
+            <Text fx:id="Coin" fill="WHITE" layoutX="8.0" layoutY="39.9326171875" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="54.0" AnchorPane.bottomAnchor="-4.271484375" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="4.0">
+               <font>
+                  <Font name="Segoe Script" size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="665.0" layoutY="25.0" prefHeight="171.0" prefWidth="609.0">
+         <children>
+            <GridPane fx:id="Market" prefHeight="131.0" prefWidth="9.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="819.0" layoutY="802.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="75.0">
+         <children>
+            <Text fx:id="Attack" fill="WHITE" layoutX="1.0" layoutY="30.9326171875" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="68.0" AnchorPane.bottomAnchor="-4.271484375" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="-5.0">
+               <font>
+                  <Font name="Segoe Script" size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="820.0" layoutY="850.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="68.0">
+         <children>
+            <Text fx:id="Wisdom" fill="WHITE" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="68.203125" AnchorPane.bottomAnchor="-7.3388671875" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.203125" AnchorPane.topAnchor="-1.9326171875">
+               <font>
+                  <Font name="Segoe Script" size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="60.0" fitWidth="75.0" layoutX="753.0" layoutY="741.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/coin.png" />
+         </image></ImageView>
+      <ImageView fitHeight="60.0" fitWidth="75.0" layoutX="750.0" layoutY="794.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/attack.png" />
+         </image></ImageView>
+      <ImageView fitHeight="60.0" fitWidth="75.0" layoutX="749.0" layoutY="848.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/widsom.png" />
+         </image></ImageView>
+      <AnchorPane layoutX="568.0" layoutY="275.0" prefHeight="64.0" prefWidth="684.0">
+         <children>
+            <Text fx:id="indication" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="668.9999999999998">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button fx:id="stop" layoutX="831.0" layoutY="223.0" mnemonicParsing="false" onAction="#stopTurn" prefHeight="52.0" prefWidth="130.0" text="Stop Turn" />
+      <HBox layoutX="1110.0" layoutY="611.0" prefHeight="314.0" prefWidth="751.0">
+         <children>
+            <ScrollPane fx:id="scrollHandJD" prefHeight="314.0" prefWidth="1515.0">
+               <content>
+                  <GridPane fx:id="HandJD" prefHeight="150.0" prefWidth="9.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+      <HBox layoutX="5.0" layoutY="631.0" prefHeight="314.0" prefWidth="739.0">
+         <children>
+            <ScrollPane fx:id="scrollHandJG" prefHeight="314.0" prefWidth="1515.0">
+               <content>
+                  <GridPane fx:id="HandJG" prefHeight="150.0" prefWidth="9.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+      <HBox layoutX="1.0" layoutY="381.0" prefHeight="190.0" prefWidth="759.0">
+         <children>
+            <Pane prefHeight="190.0" prefWidth="760.0">
+               <children>
+                  <GridPane fx:id="cityJG" layoutY="22.0" prefHeight="30.0" prefWidth="16.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <ImageView fx:id="volfyOnCity8JG" fitHeight="133.0" fitWidth="128.0" layoutX="63.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="volfyOnCity9JG" fitHeight="133.0" fitWidth="128.0" layoutX="298.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="volfyOnCity10JG" fitHeight="133.0" fitWidth="128.0" layoutX="557.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children></HBox>
+      <HBox layoutX="1097.0" layoutY="388.0" prefHeight="190.0" prefWidth="759.0">
+         <children>
+            <Pane prefHeight="190.0" prefWidth="760.0">
+               <children>
+                  <GridPane fx:id="cityJD" layoutX="6.0" layoutY="14.0" prefHeight="30.0" prefWidth="16.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <ImageView fx:id="volfyOnCity8JD" fitHeight="133.0" fitWidth="128.0" layoutX="68.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="volfyOnCity9JD" fitHeight="133.0" fitWidth="128.0" layoutX="324.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="volfyOnCity10JD" fitHeight="133.0" fitWidth="128.0" layoutX="562.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox layoutX="795.0" layoutY="514.0" prefHeight="124.0" prefWidth="234.0">
+         <children>
+            <GridPane fx:id="cave" prefHeight="33.0" prefWidth="15.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+      <Button layoutX="840.0" layoutY="912.0" mnemonicParsing="false" onAction="#refreshRessources" text="refresh ressources" />
+    <Button layoutX="109.0" layoutY="355.0" mnemonicParsing="false" onAction="#OnCity8JG" text="here" />
+    <Button layoutX="361.0" layoutY="355.0" mnemonicParsing="false" onAction="#OnCity9JG" text="here" />
+      <Button layoutX="624.0" layoutY="355.0" mnemonicParsing="false" onAction="#OnCity10JG" text="here" />
+      <Button layoutX="1206.0" layoutY="355.0" mnemonicParsing="false" onAction="#OnCity8JD" text="here" />
+      <Button layoutX="1465.0" layoutY="355.0" mnemonicParsing="false" onAction="#OnCity9JD" text="here" />
+      <Button layoutX="1713.0" layoutY="355.0" mnemonicParsing="false" onAction="#OnCity10JD" text="here" />
+      <ImageView fitHeight="327.0" fitWidth="573.0" layoutX="1306.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Mysthea_Playerboard_Yellow.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="314.0" fitWidth="568.0" layoutX="-13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Mysthea_Playerboard_Yellow.jpg" />
+         </image>
+      </ImageView>
+      <ScrollPane fx:id="scrollJD" layoutX="1306.0" layoutY="-5.0" prefHeight="307.0" prefWidth="573.0">
+         <content>
+            <GridPane fx:id="MuseumJD" focusTraversable="true" prefHeight="56.0" prefWidth="9.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane fx:id="scrollJG" prefHeight="314.0" prefWidth="554.0">
+         <content>
+            <GridPane fx:id="MuseumJG" focusTraversable="true" prefHeight="56.0" prefWidth="9.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Text fill="WHITE" layoutX="867.0" layoutY="748.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="You can :" underline="true">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="920.0" layoutY="787.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Volfyirion">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="921.0" layoutY="813.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Destruct a Card">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="921.0" layoutY="839.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Destruct a Protector (E)">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="921.0" layoutY="865.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Destruct a Building (E)">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="canMovVolfy" layoutX="895.0" layoutY="787.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="canDestructCard" layoutX="895.0" layoutY="814.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="canDestructProtector" layoutX="895.0" layoutY="841.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="canDestructBuilding" layoutX="895.0" layoutY="866.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
